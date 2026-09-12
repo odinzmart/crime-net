@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>view-crime</title>
+         <link rel="stylesheet" href="style.css">
+        </head>
+    <body>
+         <h2>Search Crimers By Name</h2>
+         <form id="searchForm">
+    <label>ENTER THE NAME</label>
+    <input id="name" type="text"><br>
+    <button type="submit">Submit</button>
+      </form>  
+         <h2>Crimers Report</h2>
+        <table>
+            <tr>
+                <th>CASEID</th>
+                <th>NAME</th>
+                <th>LOCATION</th>
+                <th>CRIMETYPE</th>
+                <th>CRIMESTATUS</th>
+            </tr>
+         <tbody id="crimetable"></tbody><!-- table body where rows will be inserted -->
+        </table>
+         <script src="crimeportal.js"></script>
+        <script type="text/javascript">
+window.onload=function(){
+    showcrimers();
+}
+            </script>
+        </body>
+        </html>

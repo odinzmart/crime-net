@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>add crime by police</title>
+     <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+  <table>
+        <tr>
+            <th>caseid</th>
+            <th>name</th>
+            <th>location</th>
+            <th>crimetype</th>
+            <th>crimestatus</th>
+        </tr>
+
+        <tbody id="crimetable"></tbody>
+    </table>
+
+  <h2>Add Crime By Police</h2>
+  <form action="http://localhost:8080/crimeportal" method="post">
+    <label for="caseid">ENTER THE CASE ID</label>
+    <input name="caseid" type="number"><br>
+     <label for="name">ENTER THE NAME</label>
+    <input name="name" type="text"><br>
+     <label for="location">ENTER THE LOCATION</label>
+    <input name="location" type="text"><br>
+    <label for="crimetype">ENTER THE CRIME TYPE</label>
+    <input name="crimetype" type="text"><br>
+    <label for="crimestatus">ENTER THE CRIME STATUS</label>
+    <input name="crimestatus" type="text"><br>
+
+    <button type="submit">Submit</button>
+      </form>  
+      <script src="crimeportal.js"></script>
+
+    <script>
+        window.onload = function() {
+            showcrimers();
+        }
+    </script>
+</body>
+</html>

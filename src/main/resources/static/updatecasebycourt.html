@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Case By Court</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>CASEID</th>
+            <th>NAME</th>
+            <th>LOCATION</th>
+            <th>CRIMETYPE</th>
+            <th>CRIMESTATUS</th>
+        </tr>
+
+        <tbody id="crimetable"></tbody>
+    </table>
+
+
+    <!-- UPDATE FORM -->
+    <h2>Update Case By Court</h2>
+
+    <form id="updateForm">
+
+        <label>ENTER THE CASE ID</label>
+        <input type="number" id="caseid"><br>
+
+        <label>ENTER THE NAME</label>
+        <input type="text" id="name"><br>
+
+        <label>ENTER THE LOCATION</label>
+        <input type="text" id="location"><br>
+
+        <label>ENTER THE CRIME TYPE</label>
+        <input type="text" id="crimetype"><br>
+
+        <label>ENTER THE CRIME STATUS</label>
+
+<select id="crimestatus">
+    <option value="Pending">pending</option>
+    <option value="Under Investigation">under investigation</option>
+    <option value="Under Discussion">under discussion</option>
+    <option value="Arrested">arrested</option>
+    <option value="In Jail">in jail</option>
+    <option value="On Bail">on bail</option>
+    <option value="Escaped">escaped</option>
+    <option value="Missing">missing</option>
+    <option value="Released">released</option>
+    <option value="Case Closed">case Closed</option>
+</select>
+
+        <button type="submit">Update</button>
+
+    </form>
+    <script src="crimeportal.js"></script>
+
+    <script>
+        window.onload = function() {
+            showcrimers();
+        }
+    </script>
+
+</body>
+</html>
