@@ -1,5 +1,5 @@
 function showcrimers() {
-    fetch("http://crime-net-production.up.railway.app")
+    fetch("http://crime-net-production.up.railway.app/crimeportal")
         .then(response => response.json())
         .then(crimeportal => {
 
@@ -39,7 +39,7 @@ if (updateForm) {
         let crimetype = document.getElementById("crimetype").value;
         let crimestatus = document.getElementById("crimestatus").value;
 
-        let url = "http://localhost:8080/crimeportal/" + caseid
+        let url = "http://crime-net-production.up.railway.app/crimeportal/" + caseid
             + "?name=" + encodeURIComponent(name)
             + "&location=" + encodeURIComponent(location)
             + "&crimetype=" + encodeURIComponent(crimetype)
@@ -72,7 +72,7 @@ if (searchForm) {
 
         let name = document.getElementById("name").value;
 
-        fetch("http://crime-net-production.up.railway.app/searchbyname?name="
+        fetch("http://crime-net-production.up.railway.app/crimeportal/searchbyname?name="
             + encodeURIComponent(name))
 
         .then(response => response.json())
