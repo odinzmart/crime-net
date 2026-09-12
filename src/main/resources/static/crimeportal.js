@@ -1,5 +1,5 @@
 function showcrimers() {
-    fetch("http://localhost:8080/crimeportal")
+    fetch("http://crime-net-production.up.railway.app")
         .then(response => response.json())
         .then(crimeportal => {
 
@@ -72,7 +72,7 @@ if (searchForm) {
 
         let name = document.getElementById("name").value;
 
-        fetch("http://localhost:8080/crimeportal/searchbyname?name="
+        fetch("http://crime-net-production.up.railway.app/searchbyname?name="
             + encodeURIComponent(name))
 
         .then(response => response.json())
