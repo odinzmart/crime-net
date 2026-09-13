@@ -39,7 +39,7 @@ if (updateForm) {
         let crimetype = document.getElementById("crimetype").value;
         let crimestatus = document.getElementById("crimestatus").value;
 
-        let url = "http://crime-net-production.up.railway.app/crimeportal/" + caseid
+        let url = "/crimeportal/" + caseid
             + "?name=" + encodeURIComponent(name)
             + "&location=" + encodeURIComponent(location)
             + "&crimetype=" + encodeURIComponent(crimetype)
